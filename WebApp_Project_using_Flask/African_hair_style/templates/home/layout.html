@@ -1,0 +1,103 @@
+{% extends  'layout.html' %}
+
+{% block head %}
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home/home_page.css') }}">
+
+{% endblock %}
+
+{% block body %}
+
+
+    <div class="sidebar">
+            <div class="grid-container">
+                    <div class="row-1">
+                        <button class="hairstyle" type="button">AFRO</button>
+                    </div>
+
+
+                    <div class="row-2">
+                        <button class="hairstyle" type="button">RASTA</button>
+                    </div>
+
+
+                    <div class="row-3">
+                        <button class="hairstyle" type="button">LOCKS</button>
+                    </div>
+
+
+                    <div class="row-4">
+                        <button class="hairstyle" type="button">COUETTES</button>
+                    </div>
+
+            </div>
+        </div>
+
+    <div class="gallery" >
+        <div class="gallery-grid-container">
+            <div class="row1">
+                <div class="col1">
+                    <div class="card">
+                        <img src="{{ url_for('static', filename='images/afro/w_2000.webp') }}" class="card-img-top" width="55%">
+                        <div class="hairstyle-description">
+                            <a id="afro" href="/afro">
+                                <h1>AFRO</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col1">
+                    <div class="card">
+                        <img src="{{url_for('static', filename='images/couettes/couettes.webp')}}" class="card-img-top" width="55%">
+                        <div class="hairstyle-description">
+                            <a id="couettes" href="/couettes">
+                                <h1>COUETTES</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row1">
+                <div class="col1">
+                    <div class="card">
+                        <img src="{{url_for('static', filename='images/locks/butterfly-faux-locs-for-black-women.jpg')}}" class="card-img-top" width="55%">
+                        <div class="hairstyle-description">
+                            <a id="locks" href="/locks">
+                                <h1>LOCKS</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col1">
+                    <div class="card">
+                        <img src="{{url_for('static', filename='images/rasta/RASTALOCS.webp')}}" class="card-img-top" width="55%">
+                        <div class="hairstyle-description">
+                            <a id="rasta" href="/rasta">
+                                <h1>RASTA</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header">
+            <div class="left-section">
+                <img class="icon" src="{{ url_for('static', filename='images/symbole-afrique-continent-cadeau-colore-sauvage-autocollant.webp') }}" width="13%">
+            </div>
+
+            <div class="middle-section">
+                <h1>AFRICAN HAIRSTYLE</h1>
+            </div>
+
+            <div class="right-section">
+                <input class="search-bar" type="text" placeholder="Search">
+                <button class="search-button">
+                    <img class="search-icon" src="{{ url_for('static', filename='images/search_FILL0_wght400_GRAD0_opsz24.png') }}">
+                </button>
+            </div>
+        </div>
+
+
+{% endblock %}
